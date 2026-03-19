@@ -34,7 +34,7 @@ $env:HF_ENDPOINT = "https://hf-mirror.com"
 export HF_ENDPOINT="https://hf-mirror.com"
 
 ### 4. 启动服务
-uvicorn main:app --reload
+uvicorn main1:app --reload
 
 ### 5. 验证启动
 访问 http://localhost:8000
@@ -45,7 +45,7 @@ uvicorn main:app --reload
 ## 二、启动 Java Spring Boot 客户端
 
 ### 1. 启动项目
-运行 DemoApplication.java
+运行 FastapiSpringbootApplication.java
 
 ### 2. 测试接口
 http://localhost:8080/api/sentiment/analyze?text=I love this movie!
@@ -61,10 +61,22 @@ http://localhost:8080/api/sentiment/analyze?text=I love this movie!
 ## 三、项目结构
 
 sentiment-project/
-├── fastapi-server/
-├── springboot-client/
-├── .gitignore
-└── README.md
+├── fastapi-server/       # Python 服务
+│   └── main.py           # FastAPI 情感分析接口
+├── springboot-client/    # Java 客户端
+│   ├── src/
+│   │   └── main/
+│   │       └── java/
+│   │           └── com/
+│   │               └── example/
+│   │                   └── demo/
+│   │                       ├── config/        # RestTemplate 配置
+│   │                       ├── controller/  # 接口控制器
+│   │                       ├── service/     # 业务逻辑
+│   │                       └── DemoApplication.java  # 启动类
+│   └── pom.xml           # Maven 依赖配置
+├── .gitignore            # Git 忽略文件
+└── README.md             # 项目说明（本文）
 
 ---
 
