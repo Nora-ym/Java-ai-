@@ -59,7 +59,7 @@ http://localhost:8080/api/sentiment/analyze?text=I love this movie!
 ---
 
 ## 三、项目结构
-
+```bash
 sentiment-project/
 ├── fastapi-server/       # Python 服务
 │   └── main.py           # FastAPI 情感分析接口
@@ -77,6 +77,7 @@ sentiment-project/
 │   └── pom.xml           # Maven 依赖配置
 ├── .gitignore            # Git 忽略文件
 └── README.md             # 项目说明（本文）
+```
 
 ---
 
